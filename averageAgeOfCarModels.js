@@ -1,18 +1,22 @@
+// golbal veriables
 const newInventoryCarModels = ["S1", "T1", "S2", "S1", "S2", "S1"];
 const newInventoryYearBuilt = [1922, 2011, 1975, 2002, 1965, 1951];
-const carAge = [];
-let curYear = 2022;
-for (let i = 0; i < newInventoryYearBuilt.length; i++) {
-  const age = curYear - newInventoryYearBuilt[i];
-  carAge.push(age);
-}
+const carAgeBookKeeper = {};
 
 let total = 0;
+let curYear = 2022;
 const numOfCars = newInventoryCarModels.length;
-for (let i = 0; i < carAge.length; i++) {
-  console.log(carAge[i]);
-  total += carAge[i];
-}
 
+for (let i = 0; i < newInventoryYearBuilt.length; i++) {
+  const age = curYear - newInventoryYearBuilt[i];
+  total += age;
+  const carModel = newInventoryCarModels[i];
+  console.log({ carModel, age });
+  carAgeBookKeeper[carModel + "-" + i] = age;
+}
 const average = total / numOfCars;
-console.log("The average car age is ", average);
+
+carAgeBookKeeper["total"] = total;
+carAgeBookKeeper["average"] = average;
+
+console.log(carAgeBookKeeper);
