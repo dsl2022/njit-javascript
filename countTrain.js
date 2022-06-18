@@ -1,4 +1,4 @@
-let newInventoryCarModels = ["s1", "S1", "T1", "S2", "S1", "S2", "S1"];
+let newInventoryCarModels = ["S1", "T1", "S2", "S1", "S2", "S1"];
 let newInventoryCarTypes = [
   "StockCar",
   "Refrigerator",
