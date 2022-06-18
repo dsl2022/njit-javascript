@@ -8,7 +8,7 @@ for (let i = 0; i < newInventoryYearBuilt.length; i++) {
 }
 
 let total = 0;
-const numOfCars = newInventoryCarModels.length - 1;
+const numOfCars = newInventoryCarModels.length;
 for (let i = 0; i < carAge.length; i++) {
   console.log(carAge[i]);
   total += carAge[i];
